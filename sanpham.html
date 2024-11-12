@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://png.pngtree.com/thumb_back/fw800/background/20231221/pngtree-sunflower-under-blue-sky-image_15539015.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .product-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            gap: 3cm;
+        }
+        .highlight ul {
+    list-style: none; /* Loại bỏ ký hiệu mặc định của danh sách */
+    padding: 0; /* Loại bỏ padding mặc định của ul */
+    margin: 0; /* Loại bỏ margin mặc định của ul */
+    text-align: left; /* Căn trái nội dung trong danh sách */
+}
+
+.highlight li {
+    display: flex; /* Sử dụng flexbox để căn biểu tượng và văn bản theo hàng ngang */
+    align-items: center; /* Căn giữa dọc biểu tượng và văn bản */
+    margin: 5px 0; /* Thêm khoảng cách giữa các dòng */
+}
+
+.highlight li::before {
+    content: ""; /* Thêm biểu tượng giọt nước */
+    margin-right: 10px; /* Thêm khoảng cách giữa biểu tượng và văn bản */
+    color: #00bfff; /* Màu xanh dương cho biểu tượng */
+}
+
+
+.product-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-row:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+
+        .product-info {
+    width: 60%; /* Tăng kích thước chiều ngang để ôm nội dung */
+    height: auto; /* Cho phép chiều cao tự động điều chỉnh */
+    background-color: white;
+    border: 3px solid red;
+    border-radius: 50%;
+    padding: 40px; /* Tăng padding để nội dung thoáng hơn */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Căn giữa nội dung theo chiều dọc */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-info button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 5px 15px; /* Giảm padding */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    width: fit-content; /* Đảm bảo nút vừa với nội dung */
+    display: block; /* Chuyển nút thành block để dễ căn giữa */
+    margin: 10px auto; /* Căn giữa nút */
+    text-align: center;
+}
+
+.product-info button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+        .product-info:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-info h2 {
+            font-size: 20px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .product-info p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .product-info .price {
+            font-weight: bold;
+            color: #007BFF;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .product-info button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .product-info button:hover {
+            background-color: #0056b3;
+        }
+
+        .product-image {
+            max-width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>SẢN PHẨM </h1>
+    </header>
+    <div class="product-container">
+        <!-- Product 1 -->
+        <div class="product-row">
+            <div class="product-info">
+                <h2>Dầu Gạo Lứt Simply</h2>
+                <p>
+                    Dầu Gạo Lứt Simply được chiết xuất từ lớp màng cám, là nơi chứa nhiều dưỡng chất nhất của hạt gạo lứt.
+                    <br><br>
+                    Gạo lứt là gạo nguyên cám, được biết đến là thực phẩm có nhiều lợi ích cho sức khỏe.
+                    <br><br>
+                    
+            
+                    Dầu Gạo Lứt Simply được sản xuất theo quy trình khép kín từ khâu chọn nguyên liệu đến đóng chai thành phẩm, tuân thủ nghiêm ngặt tiêu chuẩn quốc tế về an toàn vệ sinh thực phẩm: FSSC 22000, HACCP và AIB. 
+                    <br><br>
+                    Dầu Gạo Lứt Simply, món quà diệu kỳ từ gạo lứt cho một trái tim khỏe. Sản phẩm được Hội Tim Mạch Học Việt Nam khuyên dùng.
+                </p>
+                <div class="highlight">
+                    <strong>Đặc điểm nổi bật:</strong>
+                    <ul>
+                        <li>💧 100% Nguyên chất từ gạo lứt.</li>
+                        <li>💧 Giàu Gamma Oryzanol & Phytosterol, giúp đẩy lùi Cholesterol xấu, bảo vệ sức khỏe tim mạch.</li>
+                        <li>💧Sản phẩm không chứa Cholesterol và a-xít béo cấu hình Trans, không chất bảo quản và chất tạo màu.</li>
+                    </ul>
+                </div>
+                <div class="price">250.000 VNĐ</div>
+                <button>Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product-image">
+                <img src="https://images-handler.kamereo.vn/eyJidWNrZXQiOiJpbWFnZS1oYW5kbGVyLXByb2QiLCJrZXkiOiJzdXBwbGllci82NTQvUFJPRFVDVF9JTUFHRS9jZWExNDliNS05NWE2LTRkMDUtYTlhNS04ZTdlZGU4MDk1OWUuamZpZiJ9"
+                    alt="Dầu Gạo Lứt Simply">
+            </div>
+        </div>
+        <!-- Product 2 -->
+<div class="product-row">
+    <div class="product-info">
+        <h2>Dầu Hướng Dương Simply</h2>
+        <p>
+            SIMPLY - Cho Một Trái Tim Khoẻ!
+            <br><br>
+            Dầu Hướng Dương Simply nguyên chất 100%, được sản xuất từ nguồn nguyên liệu nhập khẩu cao cấp, giàu Vitamin E tự nhiên.
+            <br><br>
+            Mỗi giọt Dầu Hướng Dương Simply chứa đựng một lượng Vitamin E tự nhiên dồi dào, giúp làm chậm quá trình lão hoá, đồng thời còn có hàm lượng cao chất béo không bão hòa (> 85%), giúp giảm nguy cơ các bệnh tim mạch.
+        </p>
+        <div class="highlight">
+            <strong>Đặc điểm nổi bật:</strong>
+            <ul>
+                <li>💧 100% Nguyên chất.</li>
+                <li>💧 Giàu Vitamin E tự nhiên.</li>
+                <li>💧 Giàu chất béo không bão hoà (> 85%).</li>
+                <li>💧 Giúp làm chậm quá trình lão hoá.</li>
+                <li>💧 Bảo vệ sức khỏe tim mạch.</li>
+            </ul>
+        </div>
+        <div class="price">200.000 VNĐ</div>
+        <button>Thêm vào giỏ hàng</button>
+    </div>
+    <div class="product-image">
+        <img src="https://laz-img-sg.alicdn.com/p/c9ad71ef23ab819710a728074937dae3.png" alt="Dầu Hướng Dương Simply">
+    </div>
+</div>
+
+        <!-- Product 3 -->
+        <div class="product-row">
+            <div class="product-info">
+                <h2>Dầu Đậu nành Simply</h2>
+                <p>
+                    SIMPLY - Cho Một Trái Tim Khoẻ!
+                    <br><br>
+                    Đội ngũ chuyên gia Simply đã dành trọn tâm huyết để nghiên cứu và cho ra đời sản phẩm Dầu Đậu Nành Simply nguyên chất 100%, giàu các chất béo không bão hòa, Omega 3-6-9 và vitamin, giúp bảo vệ sức khỏe tim mạch.
+                    <br><br>
+                    Dầu Đậu Nành Simply được sản xuất bằng công nghệ tinh chế hiện đại từ Châu Âu, tuân thủ nghiêm ngặt tiêu chuẩn quốc tế về an toàn vệ sinh thực phẩm: FSSC 22000, HACCP và AIB. Sản phẩm không chứa Cholesterol và a-xít béo cấu hình Trans (Theo khuyến nghị của FDA), không chất bảo quản và chất tạo màu.
+                </p>
+                <div class="highlight">
+                    <strong>Đặc điểm nổi bật:</strong>
+                    <ul>
+                        <li>💧 100% Nguyên chất.</li>
+                        <li>💧 Giàu các chất béo không bão hòa đa Omega 3-6-9.</li>
+                        <li>💧 Giàu Vitamin E & Phytosterol tự nhiên.</li>
+                        <li>💧 Bổ sung Vitamin A.</li>
+                        <li>💧 Giúp bảo vệ sức khỏe tim mạch.</li>
+                    </ul>
+                </div>
+                <div class="price">300.000 VNĐ</div>
+                <button>Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product-image">
+                <img src="https://product.hstatic.net/1000141988/product/dau_an_cao_cap_meizan_1_lit__i0001797__add780c0a5724685ac74774a53b8a798_1024x1024.png"
+                    alt="Dầu Olive Simply">
+            </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="product-row">
+            <div class="product-info">
+                <h2>Dầu Hạt cải Simply</h2>
+                <p>
+                    SIMPLY - Cho Một Trái Tim Khoẻ!
+                    <br><br>
+                    Dầu Hạt Cải Simply nguyên chất 100%, được sản xuất từ nguồn nguyên liệu nhập khẩu cao cấp, giàu chất béo không bão hoà.
+                    <br><br>
+                    Hiểu được tầm quan trọng của thực phẩm tới sức khoẻ, đội ngũ chuyên gia Simply đã chọn lọc nguồn nguyên liệu nhập khẩu cao cấp từ những cánh đồng cải tự nhiên để cho ra đời Dầu Hạt Cải Simply, lưu giữ hàm lượng cao chất béo không bão hòa (> 88%) và các vitamin, giúp bảo vệ sức khỏe tim mạch.                </p>
+                <div class="highlight">
+                    <strong>Đặc điểm nổi bật:</strong>
+                    <ul>
+                        <li>💧 100% Nguyên chất.</li>
+                        <li>💧Giàu chất béo không bão hoà (> 88%).</li>
+                       
+                        <li>💧 Bổ sung Vitamin A.</li>
+                        <li>💧 Giúp bảo vệ sức khỏe tim mạch.</li>
+                    </ul>
+                </div>
+                
+                <div class="price">230.000 VNĐ</div>
+                <button>Thêm vào giỏ hàng</button>
+            </div>
+            <div class="product-image">
+                <img src="https://product.hstatic.net/1000288770/product/dau_hat_cai_nguyen_chat_simply_bo_3_chai_x_1_lit_7b925278fdbb4b39a872b3da32987fec_master.jpg"
+                    alt="Dầu Cám Gạo Simply">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

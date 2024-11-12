@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://cdn.mobilecity.vn/mobilecity-vn/images/2024/05/hinh-nen-hoa-huong-duong-1.jpg.webp') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .contact-container, .branch-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Màu nền mờ */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .contact-info strong {
+            color: #333;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            resize: vertical;
+        }
+
+        .contact-form textarea {
+            min-height: 100px;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Styles for branch office sections */
+        .branch-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding-top: 20px;
+            justify-content: space-between;
+        }
+
+        .branch-box {
+            flex: 1 1 calc(50% - 20px);
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            min-width: 300px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .branch-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            background-color: rgba(255, 255, 255, 0.95); /* Màu nền mờ khi hover */
+        }
+
+        .branch-box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://example.com/your-icon-background.jpg') no-repeat center;
+            background-size: cover;
+            opacity: 0.1;
+            z-index: -1; /* Đẩy nền ra sau nội dung */
+        }
+
+        .branch-box h3 {
+            font-size: 18px;
+            margin-top: 0;
+            color: #333;
+        }
+
+        .branch-box p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .branch-box strong {
+            color: #333;
+        }
+
+        .icon {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            text-align: center;
+            margin-right: 10px;
+            color: #007BFF;
+            font-size: 20px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Phần liên hệ chính -->
+    <div class="contact-container">
+        <h1>Liên hệ</h1>
+        
+        <div class="contact-info">
+            <p><strong>Địa chỉ:</strong> Tầng 8, Tòa nhà Bitexco, Số 2 Hải Triều, Quận 1, TP. Hồ Chí Minh</p>
+            <p><strong>Số điện thoại:</strong> 028 3821 0060</p>
+            <p><strong>Email:</strong> info@calofic.com.vn</p>
+            <p><strong>Giờ làm việc:</strong> Thứ 2 - Thứ 6, 8:00 - 17:00</p>
+        </div>
+        
+        <form class="contact-form">
+            <label for="name">Họ và tên:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Số điện thoại:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="message">Nội dung:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Gửi thông tin</button>
+        </form>
+    </div>
+
+    <!-- Phần chi nhánh -->
+    <div class="branch-container">
+        <div class="branch-section">
+            <!-- Trụ sở chính Quảng Ninh -->
+            <div class="branch-box">
+                <span class="icon">🏢</span>
+                <h3>TRỤ SỞ CHÍNH QUẢNG NINH</h3>
+                <p><strong>Địa chỉ:</strong> KCN Cái Lân, P. Bãi Cháy, Tp. Hạ Long, T. Quảng Ninh, Việt Nam</p>
+                <p><strong>Điện thoại:</strong> (+84 203) 3 846 993</p>
+                <p><strong>Fax:</strong> (+84 203) 3 845 971</p>
+                <p><strong>Email:</strong> info-calofic@vn.wilmar-intl.com</p>
+            </div>
+
+            <!-- Văn phòng chi nhánh Hồ Chí Minh -->
+            <div class="branch-box">
+                <span class="icon">🏢</span>
+                <h3>VĂN PHÒNG CHI NHÁNH HỒ CHÍ MINH</h3>
+                <p><strong>Địa chỉ:</strong> Lầu 12, Phòng 1202, Tòa nhà Royal Tower A, 235 Nguyễn Văn Cừ, P. Nguyễn Cư Trinh, Q. 1, Tp. Hồ Chí Minh, Việt Nam</p>
+                <p><strong>Điện thoại:</strong> (+84 28) 38 333 168</p>
+                <p><strong>Fax:</strong> (+84 28) 38 333 166</p>
+                <p><strong>Email:</strong> info-calofic@vn.wilmar-intl.com</p>
+            </div>
+
+            <!-- Nhà máy chi nhánh Hiệp Phước -->
+            <div class="branch-box">
+                <span class="icon">🏭</span>
+                <h3>NHÀ MÁY CHI NHÁNH HIỆP PHƯỚC</h3>
+                <p><strong>Địa chỉ:</strong> Lô C21 và Lô C18-C24, KCN Hiệp Phước, X. Hiệp Phước, H. Nhà Bè, TP. Hồ Chí Minh, Việt Nam</p>
+                <p><strong>Điện thoại:</strong> (+84 28) 37 818 806</p>
+                <p><strong>Fax:</strong> (+84 28) 37 818 802</p>
+                <p><strong>Email:</strong> info-calofic@vn.wilmar-intl.com</p>
+            </div>
+
+            <!-- Văn phòng chi nhánh Hà Nội -->
+            <div class="branch-box">
+                <span class="icon">🏢</span>
+                <h3>VĂN PHÒNG CHI NHÁNH HÀ NỘI</h3>
+                <p><strong>Địa chỉ:</strong> Tầng 10, Tòa nhà Corner Stone, Số 16, Đ. Phan Chu Trinh, Q. Hoàn Kiếm, TP. Hà Nội, Việt Nam</p>
+                <p><strong>Điện thoại:</strong> (+84 24) 37 669 723</p>
+                <p><strong>Fax:</strong> (+84 24) 37 669 736</p>
+                <p><strong>Email:</strong> info-calofic@vn.wilmar-intl.com</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
